@@ -1,0 +1,9 @@
+.jumbotron h1{
+    text-align: center;
+    color:#FF6347;
+    font-weight: bolder
+}
+
+.jumbotron #btn {
+    background-color:#FF6347;
+}

@@ -1,0 +1,265 @@
+<%- include('menuUsuario.ejs')%>   
+<body>
+<link rel="stylesheet" type="text/css" href="styles/publicar.css">
+
+<div class="container" id="pagina">
+    
+    <h2>Titulo</h2>
+    <div id="forms">
+        <div class="container" id="pag">
+            <div class="row">
+            <div class="col-md-12">
+            <form  method="POST">
+                <div   class="card border-secondary mb-3" style="max-width: 100rem;">
+                    <div class="card-header" style="background-color: #696969; color:#ffffff">Nome e Imagem do Evento</div>
+                        <div id="evento" class="container">
+                                <p>Nome do Evento</p><input class="form-control" type="text" name="nome"/>  
+                        </div>    
+                        <div class="card-body text-secondary">  
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="foto" value="true" /><p style="font-weight: bolder">Incluir banner ou logo</p></label>
+                            </div>
+                        </div>    
+                        <div id="add" class="card-body text-secondary">  
+                            <div class="checkbox" id="type">
+                                <label><input type="radio" name="opcao" value="banner" /><p style="font-weight: bolder">Banner</p></label>
+                                <label><input type="radio" name="opcao" value="logo" /><p style="font-weight: bolder">Logo</p></label>                              
+                            </div>    
+                                <input class="form-control"type="file"/>
+                                <div id="msg">
+                                       <p> A imagem escolhida deve estar em formato JPG, GIF, ou PNG e ter no máximo 2MB. A dimensão recomendada é de 1200 x 444 pixels. Imagens com altura ou largura diferentes destas podem ser redimensionadas.</p>
+                                </div>
+                        </div>    
+                </div>
+            </div>
+        </div> 
+                <div class="row">
+                <div class="col-md-8">
+                <div   class="card border-secondary mb-3" style="max-width: 45 rem;">
+                    <div class="card-header" style="background-color: #696969; color:#ffffff">Quando?</div>
+                    <div id="data" style="padding-right: 30px" class="container">
+                        <p>Inicio Evento</p>
+                        <input type="date" class="form-control"/>
+                        <p>Inicio Evento</p>
+
+                        <input type="date" class="form-control"/>
+                    </div>   
+                </div>
+                </div>
+                <div class="col-md-4">
+                        <div  class="card border-secondary mb-3" style="max-width: 40rem;">
+                            <div class="card-header" style="background-color: #696969; color:#ffffff">Onde?</div>
+                            <div style="padding-right: 20px; padding-top:20px" class="container">
+                                <select class="form-control" id="endereco">
+                                    <option value="online">Online</option>
+                                    <option value="fisico">Cadastrar Endereco</option>
+                                </select>
+                                <div id="endereco" style="padding-top:20px; padding-bottom:20px">
+                                    <div id="item">
+                                        <p>Local*</p>
+                                        <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>Local*</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>CEP</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>Rua</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>Número</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                  
+                                    <div id="item">
+                                            <p>Compl.</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>Bairro</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>Cidade*</p>
+                                            <input type="text" class="form-control" name="local" placeholder="Local"/>
+                                    </div>
+                                    <div id="item">
+                                            <p>Estado*</p>
+                                            <select class="form-control" id="estado">
+                                                <option  value="">Estado</option>
+                                                <option value="acre">Acre (Ac)</option>
+                                                <option value="alagoas">Alagoas (AL)</option>
+                                                <option value="amapa">Amapá (AP)</option>
+                                                <option value="amazonas">Amazonas (AM)</option>
+                                                <option value="bahia">Bahia (BA)</option>
+                                                <option value="ceara">Ceará (CE)</option>
+                                                <option value="distritoFederal">Distrito Federal (DF)</option>
+                                                <option value="espiritoSanto">Espírito Santo (ES)</option>
+                                                <option value="goias">Goiás (GO)</option>
+                                                <option value="maranhao">Maranhão (MA)</option>
+                                                <option value="matoGrosso">Mato Grosso (MT)</option>
+                                                <option value="matoGrossoSul">Mato Grosso do Sul (MS)</option>
+                                                <option value="minasGerais">Minas Gerais (MG)</option>
+                                                <option value="para">Pará (PA)</option>
+                                                <option value="paraiba">Paraíba (PB)</option>
+                                                <option value="parana">Paraná (PR)</option>
+                                                <option value="pernambuco">Pernambuco (PE)</option>
+                                                <option value="piaui">Piauí (PI)</option>
+                                                <option value="rioDeJaneiro">Rio de Janeiro (RJ)</option>
+                                                <option value="rioGrandeDoNorte">Rio Grande do Norte (RN)</option>
+                                                <option value="rioGrandeDoSul">Rio Grande do Sul (RS)</option>
+                                                <option value="rondonia">Rondônia (RO)</option>
+                                                <option value="roraima">Roraima (RR)</option>
+                                                <option value="santaCatarina">Santa Catarina (SC)</option>
+                                                <option value="sergipe">Sergipe (SE)</option>
+                                                <option value="saoPaulo">São Paulo (SP)</option>
+                                                <option value="Tocantins">Tocantins (TO)</option>
+
+                                            </select>
+                                    </div>
+                                </div>    
+                            </div>   
+                        </div>
+                </div>
+            </div>
+                <div class="row">
+                        <div class="col-md-8">
+                        <div  style="margin-top: -220px" class="card border-secondary mb-3" style="max-width: 100rem;">
+                            <div class="card-header" style="background-color: #696969; color:#ffffff">Ingressos</div>
+                            <div id="tabela" style="padding-right: 30px" class="container">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">N</th>  
+                                            <th scope="col">Tipo do Ingresso</th>
+                                            <th scope="col">Preço</th>
+                                            <th scope="col">Qtd</th>
+                                            <th scope="col">#</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="ing">
+                                               
+                                        </tbody>
+                                    </table>    
+                                   <button id="addIngresso" type="button" class="btn btn-default">Criar Novo Ingresso</button>
+                                    <div id="tdIngressos" class="container">
+                                        <div id="ingresso">
+                                            <p>Tipo de ingresso*</p><input id="tipo" name="tipo" type="text" class="form-control"/>
+                                        </div>    
+                                        <div id="ingresso">
+                                                <p>Preço*</p><label for="dinheiro">R$ </label><input type="text" id="dinheiro" name="dinheiro" class="dinheiro form-control" style="display:inline-block" />
+                                        </div>
+                                        <div id="ingresso">
+                                            <p>Quantidade*</p><input id="qtd" type="number" class="form-control"/>
+                                        </div> 
+                                        <div id="ingresso">
+                                            <p>Disponivel para venda?</p>
+                                            <div  class="radio" id="typeVenda">
+                                                    <label><input type="radio" id="venda"  name="venda" value="true" /><p style="font-weight: bolder">Sim</p></label>
+                                                    <label><input type="radio" id="venda" value="false"  name="venda" /><p style="font-weight: bolder">Nao</p></label>                              
+                                                </div>  
+                                        </div> 
+                                       <button id="newIngresso" type="button" class="btn btn-default">Criar Ingresso</button>
+                                    </div>    
+                            </div>   
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                                <div   class="card border-secondary mb-3" style="max-width: 100rem;">
+                                    <div class="card-header" style="background-color: #696969; color:#ffffff">Organizador</div>
+                                    <div id="data" style="padding-right: 30px" class="container">
+                                    
+                                    </div>   
+                                </div>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-8">
+                        <div  style="position:relative;" class="card border-secondary mb-3" style="max-width: 100rem;">
+                            <div class="card-header" style="background-color: #696969; color:#ffffff">Descricao</div>
+                            <div id="data" style="padding-right: 30px" class="container">
+                               
+                                    <div class = "btn-barra de ferramentas" data-role = "editor-barra de ferramentas"
+                                    data-target = "#editor" >
+                                    <textarea>
+                                        </textarea>     
+                                    </div>
+                                
+                            </div>   
+                        </div>
+                        </div>
+                        <div class="col-md-12 ">
+                        <div  class="card border-secondary mb-3" style="max-width: 100rem;">
+                            <div class="card-header" style="background-color: #696969; color:#ffffff">Quando?</div>
+                            <div id="data" style="padding-right: 30px" class="container">
+                                <p>Inicio Evento</p>
+                                <input type="date" class="form-control"/>
+                                <p>Inicio Evento</p>
+        
+                                <input type="date" class="form-control"/>
+                            </div>   
+                        </div>
+                        </div>
+                </div>
+                <div class="container-fluid" id="salvar">
+                    <button type="submit" class="btn btn-success">Salvar e Publicar</button>
+                </div>
+            </form>
+        
+    </div>
+</div>    
+</div>    
+<script>
+    $(document).ready(()=>{
+        $('.dinheiro').mask('#.##0,00', {reverse: true});
+        $('#add').hide();
+       $("#foto").change(()=>{
+           $('#add').toggle(200);
+       });
+
+       $('#tdIngressos').hide();
+       $('#addIngresso').click(()=>{
+           $('#tdIngressos').toggle(200);
+       });
+
+       $('#newIngresso').click(()=>{
+            let tipo = document.getElementById('tipo').value;
+            let preco = document.getElementById('dinheiro').value;
+            let qtd = document.getElementById('qtd').value;
+            let venda = document.getElementById('venda').value;
+            let ingresso =[{
+                tipo:tipo,
+                preco:preco,
+                qtd:qtd,
+                venda:venda
+            }];
+                for(let i = 0; i < ingresso.length;i++){
+                    $('#ing').append(
+                        
+                            '<tr>'+
+                               '<th scope="row">1</th>'+
+                                '<td>'+ingresso[i].tipo+'</td>'+
+                                '<td>'+ingresso[i].preco+'</td>'+
+                                '<td>'+ingresso[i].qtd+'</td>'+
+                                '<td><button id="rem" class="btn btn-default" >Remover</button></td>'+
+                           ' </tr>'
+                       
+                    )
+                };
+            
+            $('#tdIngressos').hide();
+
+
+        })    
+     
+    });
+
+</script>
+
+<%- include('footer.ejs')%>   
+

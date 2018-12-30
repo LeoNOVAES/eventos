@@ -1,0 +1,31 @@
+<%- include('head.ejs')%>   
+<body>
+<link rel="stylesheet" type="text/css" href="styles/index.css">
+
+<div class="container">
+
+    
+    
+    <% console.log(res)  %>
+<div class="jumbotron">
+        <h1>800000 eventos abertos</h1>
+        <div id="resultado">
+        </div>
+        <form>
+           
+          <div class="form-group">
+                  <label for="exampleInputEmail1">Pesquisar Evento</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Evento">
+                  <small id="emailHelp" class="form-text text-muted">Digite o nome do evento!</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Pesquisar por Cidade</label>
+                  <input type="text" class="form-control"  placeholder="Cidade">
+                </div>
+          
+                <button type="submit" id="btn" class="btn btn-default">Pesquisar</button>
+        </form>
+</div>
+
+<%- include('footer.ejs')%>   
+
